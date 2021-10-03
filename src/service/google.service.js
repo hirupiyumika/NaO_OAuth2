@@ -1,6 +1,5 @@
 export function calenderEvent(gapi, data, callback) {
-    console.log("creat calendar service")
-    console.log('execute create calender event on google calender!');
+
 
     let request = gapi.client.calendar.events.insert({
         'calendarId': 'primary',
@@ -18,10 +17,8 @@ export function  getUserProfile(gapi){
         });
 }
 
+// Uplod to the google drive function
 export function  uploadDrive(gapi, data){
-    console.log('execute upload file to google function!');
-    console.log('printing uploaded file: ');
-    console.log(data);
 
     // File name 
     let metadata = {
@@ -45,7 +42,6 @@ export function  uploadDrive(gapi, data){
     }).then((res) => {
         return res.json();
     }).then(function (val) {
-        console.log(val);
     });
 }
 
