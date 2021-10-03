@@ -12,7 +12,6 @@ const Calendar = () => {
     const [endDate, setEndDate] = useState("2021-11-06T17:00:00-07:00");
 
     const handleCalendarEvent = () => {
-        // console.log(genarateCalendarData());
         createCalendarEvent(genarateCalendarData(),()=>{
             console.log('Google event eka create una!');
     
