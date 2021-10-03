@@ -50,9 +50,8 @@ class GoogleProvider extends Component {
         });
     }
 
-//    Set access token to the auth context
+//    Set access token to the context
     AccessToken(token) {
-        // console.log('token : ', token);
         this.setState(prevState => {
             prevState.accessToken = token;
             return prevState;
@@ -82,7 +81,7 @@ class GoogleProvider extends Component {
         }
     }
 
-    // Retrieves user details using google drive
+    // Retrieves user details
     getUserProfile() {
         this.state.GoogleAuth.signIn().then(value => {
             getUserProfile();
@@ -91,7 +90,7 @@ class GoogleProvider extends Component {
         });
     }
 
-    //  Uploads file to google drive
+    //  Uploads file to google drive function
     uploadToGoogleDrive(data) {
         this.state.GoogleAuth.signIn().then(value => {
             uploadDrive(this.state.gapi, data);
@@ -111,7 +110,7 @@ class GoogleProvider extends Component {
 
 
 
-    // Setter for Booking details
+    // Set Booking details
     setBooking(channelingDetails) {
         console.log(channelingDetails);
         this.setState(prevState => {
@@ -125,7 +124,7 @@ class GoogleProvider extends Component {
         return this.state.channelingDetails;
     }
 
-    // user log out the 
+    // user log out
     logOut(){
         if (this.state.GoogleAuth.isSignedIn.get()){
             this.state.GoogleAuth.signOut();
