@@ -14,7 +14,7 @@ const GoogleDrive = () => {
         uploadToGoogleDrive(uploadFiles)
       };
 
-   
+      //file uploading event triggered
     const onChangeFileUpload = (event) => {
         let uploadedFile = event.target.files[0];
         //set the state
@@ -25,6 +25,7 @@ const GoogleDrive = () => {
         <>
         <p>Google drive</p>
         <>
+        {/* Accept only png & Jpg whren uploading a file */}
             <Form.Group controlId="formFile" className="mb-3">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="text" placeholder="Normal text" />
@@ -33,6 +34,8 @@ const GoogleDrive = () => {
             
 </>
         <button onClick={handleGoogleDriveUpload} >Upload to GOOGLE DRIVE</button>
+        
+        {/* Autherization triggered */}
         {isAuthorized}
         </>
      );

@@ -13,10 +13,12 @@ const Calendar = () => {
 
     const handleCalendarEvent = () => {
         createCalendarEvent(genarateCalendarData(),()=>{
-            console.log('Google event eka create una!');
+            console.log('Google event is created!');
     
         })
       };
+
+    //   Calendar data generation
 
       const genarateCalendarData = () => {
         let data = {
