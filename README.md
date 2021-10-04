@@ -1,6 +1,25 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Build Setup
+
+```bash
+# clone the project
+$ git clone https://github.com/hirupiyumika/NaO_OAuth2.git
+
+# credintial configaration
+$ if younwant you can change your google app credintial in the client_secret.json file in the configarations folder   
+
+
+# open app directory
+$ cd NaO_OAuth2
+
+# install node dependencies
+$ npm i || npm install
+
+# run the project at localhost:3000
+$ npm start
+
+```
 
 ## Available Scripts
 
