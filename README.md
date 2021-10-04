@@ -7,8 +7,7 @@
 $ git clone https://github.com/hirupiyumika/NaO_OAuth2.git
 
 # credintial configaration
-$ if younwant you can change your google app credintial in the client_secret.json file in the configarations folder   
-
+$ if you want you can change your google app credintial in the client_secret.json file in the configarations folder   
 
 # open app directory
 $ cd NaO_OAuth2
@@ -16,7 +15,7 @@ $ cd NaO_OAuth2
 # install node dependencies
 $ npm i || npm install
 
-# run the project at localhost:3000
+# Compiles and hot-reloads for development
 $ npm start
 
 ```

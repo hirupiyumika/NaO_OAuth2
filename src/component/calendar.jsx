@@ -55,8 +55,7 @@ const Calendar = () => {
       };
 
     return ( 
-        <>
-                    <div className="registration-form">
+        <div className="registration-form">
             <form onSubmit={onSubmit}>
             <h3 style={{textAlign:"center"}}>You Are Free To Book</h3>
             <br/>
@@ -80,12 +79,11 @@ const Calendar = () => {
                     <input type="text" className="form-control item" placeholder="End Date" value={endDate} 
                     onChange={(e) => setEndDate(e.target.value)}/>
                 </div>
-                <div className="form-group">
+                <div className="form-group d-grid gap-2">
                     <button type="submit" className="btn btn-block create-account">BOOKING</button>
                 </div>
             </form>
         </div>
-        </>
      );
 }
  

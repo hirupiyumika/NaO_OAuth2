@@ -1,20 +1,18 @@
 import React,{useState, useContext} from 'react';
-import Form from 'react-bootstrap/Form'
 import { GoogleContext } from '../context/context';
-
+import './style.css';
 
 const GoogleDrive = () => {
 
-    const { uploadToGoogleDrive,isAuthorized } = useContext(GoogleContext);
+    const { uploadToGoogleDrive } = useContext(GoogleContext);
     const [uploadFiles, setUploadFiles] = useState([]);
 
-
-    const handleGoogleDriveUpload = () => {
-        // console.log(genarateCalendarData());
+    const onSubmit = (e) => {
+        e.preventDefault();
         uploadToGoogleDrive(uploadFiles)
-      };
+    }
 
-      //file uploading event triggered
+      //file uploading
     const onChangeFileUpload = (event) => {
         let uploadedFile = event.target.files[0];
         //set the state
@@ -22,22 +20,20 @@ const GoogleDrive = () => {
         
     }
     return ( 
-        <>
-        <p>Google drive</p>
-        <>
-        {/* Accept only png & Jpg whren uploading a file */}
-            <Form.Group controlId="formFile" className="mb-3">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="text" placeholder="Normal text" />
-            <Form.Control type="file" accept={'image/png,image/jpeg'} onChange={(event) =>onChangeFileUpload(event)}/>
-            </Form.Group>
-            
-</>
-        <button onClick={handleGoogleDriveUpload} >Upload to GOOGLE DRIVE</button>
-        
-        {/* Autherization triggered */}
-        {isAuthorized}
-        </>
+        <div className="registration-form">
+	        <br/><br/><br/><br/><br/><br/><br/><br/>
+        <form onSubmit={onSubmit}>
+		    <h3 style={{textAlign:"center"}}>Pay to GO</h3>
+		    <br/>
+                <div className="form-group">
+                    <input style={{borderRadius:"20px"}} type="file" className="custom-file-input form-control item" 
+                    id="customFile" name="filename" accept={'image/png,image/jpeg'} onChange={(event) =>onChangeFileUpload(event)}/>
+                </div>
+                <div className="form-group d-grid gap-2">
+                    <button type="submit" className="btn btn-block create-account">SLIIP UPLOAD</button>
+                </div>
+        </form>
+    </div>
      );
 }
  

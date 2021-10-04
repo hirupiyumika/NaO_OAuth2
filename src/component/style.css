@@ -42,6 +42,10 @@ body{
     padding: 10px 20px;
 }
 
+#customFile{
+	border-radius: 20px;
+}
+
 .registration-form .create-account{
     border-radius: 30px;
     padding: 10px 20px;

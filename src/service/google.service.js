@@ -1,11 +1,8 @@
 export function calenderEvent(gapi, data, callback) {
-
-
     let request = gapi.client.calendar.events.insert({
         'calendarId': 'primary',
         'resource': data
     });
-
     request.execute((event) => callback(event));
 }
 
