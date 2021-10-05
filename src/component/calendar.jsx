@@ -16,7 +16,7 @@ const Calendar = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         createCalendarEvent(genarateCalendarData(),()=>{
-            console.log('Google event eka create una!');
+            window.location = "/google-drive"
     
         })
     }

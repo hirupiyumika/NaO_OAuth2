@@ -8,7 +8,7 @@ const Routes = () => {
 
         // create routes path
         <Switch>
-            <Route exact path="/calendar" component={Calendar} />  
+            <Route exact path="/" component={Calendar} />  
             <Route exact path="/google-drive" component={GoogleDrive} /> 
         </Switch>
      );
